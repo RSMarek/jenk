@@ -14,9 +14,11 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo "Building release..."
-                validate()
-                lib.sayHello('Build')
+                script {
+                    echo "Building release..."
+                    validate()
+                    lib.sayHello('Build')
+                }
             }
         }
     }
