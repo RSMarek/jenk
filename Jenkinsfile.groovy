@@ -16,7 +16,7 @@ pipeline {
                     echo "Loaded lib: ${lib}"
                     echo "Calling meth() method from lib:"
                     sh "cat ${libPath}"
-                    // lib.sayHello('World')
+                    lib.sayHello('World')
                 }
             }
         }
