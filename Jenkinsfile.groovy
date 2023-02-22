@@ -1,7 +1,7 @@
 #!groovy
-def libs
-def rootDir = pwd()
-// def libs = load "${rootDir}@libs/lib.groovy"
+// def libs
+// def rootDir = pwd()
+def libs = load "libs/lib.groovy"
 
 pipeline {
     agent any
@@ -9,8 +9,9 @@ pipeline {
         stage('load lib') {
             steps {
                 script {
-                    libs = load "libs/lib.groovy"
-                    libs.meth()
+                    echo "Building lib..."
+                    // libs = load "libs/lib.groovy"
+                    // libs.meth()
                 }
             }
         }
