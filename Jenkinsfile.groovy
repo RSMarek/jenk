@@ -9,8 +9,9 @@ pipeline {
         stage('load lib') {
             steps {
                 script {
-                    def workspace = env.WORKSPACE
-                    def libPath = "${workspace}/libs/lib.groovy"
+                    // def workspace = env.WORKSPACE
+                    // def libPath = "${workspace}/libs/lib.groovy"
+                    def libPath = "libs/lib.groovy"
                     echo "Loading lib from ${libPath}"
                     def lib = load libPath
                     echo "Loaded lib: ${lib}"
