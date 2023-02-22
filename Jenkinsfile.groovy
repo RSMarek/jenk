@@ -9,14 +9,7 @@ pipeline {
         stage('load lib') {
             steps {
                 script {
-                    // def workspace = env.WORKSPACE
-                    // def libPath = "${workspace}/libs/lib.groovy"
-                    def libPath = "libs/lib.groovy"
-                    echo "Loading lib from ${libPath}"
-                    def lib = load libPath
-                    echo "Loaded lib: ${lib}"
-                    echo "Calling meth() method from lib:"
-                    sh "cat ${libPath}"
+                    def lib = load "libs/lib.groovy"
                     lib.sayHello('World')
                 }
             }
