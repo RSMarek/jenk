@@ -16,6 +16,7 @@ pipeline {
             steps {
                 echo "Building release..."
                 validate()
+                lib.sayHello('Build')
             }
         }
     }
