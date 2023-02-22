@@ -1,5 +1,4 @@
 #!groovy
-import hudson.FilePath
 
 
 
