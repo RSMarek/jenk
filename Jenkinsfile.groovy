@@ -9,8 +9,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building release..."
-                libs.meth()
+                validate()
             }
         }
     }
+}
+
+def validate(){
+    echo "Running validate"
 }
