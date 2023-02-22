@@ -1,6 +1,6 @@
 #!groovy
 
-// def libs = new libs.lib();
+def libs = new libs.lib();
 
 pipeline {
     agent any
@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building release..."
-                // libs.meth()
+                libs.meth()
             }
         }
     }
