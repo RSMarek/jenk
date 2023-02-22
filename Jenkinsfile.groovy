@@ -4,7 +4,7 @@
 import hudson.FilePath
 
 def workspace = env.WORKSPACE
-def libs = load "${workspace}/libs/lib.groovy"
+// def libs = load "${workspace}/libs/lib.groovy"
 
 pipeline {
     agent any
