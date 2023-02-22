@@ -1,7 +1,6 @@
 #!groovy
 import hudson.FilePath
-def workspace = env.WORKSPACE
-def libs = load "${workspace}/libs/lib.groovy"
+
 
 pipeline {
     agent any
@@ -9,6 +8,8 @@ pipeline {
         stage('load lib') {
             steps {
                 script {
+                    def workspace = env.WORKSPACE
+                    def libs = load "${workspace}/libs/lib.groovy"
                     echo "Building lib..."
                 }
             }
