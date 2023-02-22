@@ -9,7 +9,7 @@ pipeline {
         stage('load lib') {
             steps {
                 script {
-                    libs = new libs.lib()
+                    libs = load "libs/lib.groovy"
                     libs.meth()
                 }
             }
