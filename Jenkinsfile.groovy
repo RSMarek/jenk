@@ -1,5 +1,5 @@
 #!groovy
-
+def libs
 def rootDir = pwd()
 // def libs = load "${rootDir}@libs/lib.groovy"
 
@@ -9,7 +9,7 @@ pipeline {
         stage('load lib') {
             steps {
                 script {
-                    def libs = load "${rootDir}@libs/lib.groovy"
+                    libs = load "libs/lib.groovy"
                     libs.meth()
                 }
             }
