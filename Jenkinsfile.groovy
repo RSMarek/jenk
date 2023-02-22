@@ -12,11 +12,13 @@ pipeline {
                     def workspace = env.WORKSPACE
                     def libPath = "${workspace}/libs/lib.groovy"
                     echo "Loading lib from ${libPath}"
-                    def lib = load libPath
+                    def libClass = new URLClassLoader([new File(libPath).toURI().toURL()]).loadClass("Lib")
+                    def lib = libClass.newInstance()
                     echo "Loaded lib: ${lib}"
-                    echo "Calling meth() method from lib:"
+                    echo "Calling sayHello() method from lib:"
+                    lib.sayHello('World')
+                    echo "Contents of lib.groovy:"
                     sh "cat ${libPath}"
-                    // lib.sayHello('World')
                 }
             }
         }

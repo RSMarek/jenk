@@ -1,5 +1,7 @@
 package libs;
 
-def sayHello(name) {
-    println "Hello, ${name}!"
+class Lib {
+    def sayHello(name) {
+        println "Hello, ${name}!"
+    }
 }
