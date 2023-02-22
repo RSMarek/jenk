@@ -1,6 +1,5 @@
 #!groovy
-
-
+def kek
 
 pipeline {
     agent any
