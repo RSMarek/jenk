@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('load lib') {
             steps {
-                libs = load "${rootDir}@libs/lib.groovy"
+                def libs = load "${rootDir}@libs/lib.groovy"
+                libs.meth()
             }
         }
         stage('Build') {
