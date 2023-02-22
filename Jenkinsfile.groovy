@@ -1,7 +1,7 @@
 #!groovy
 
-def rootDir = pwd()
-def libs = load "${rootDir}@libs/lib.groovy"
+// def rootDir = pwd()
+// def libs = load "${rootDir}@libs/lib.groovy"
 
 pipeline {
     agent any
