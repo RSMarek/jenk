@@ -1,6 +1,9 @@
 #!groovy
 // def libs
 // def rootDir = pwd()
+import hudson.FilePath
+
+
 def libs = load "libs/lib.groovy"
 
 pipeline {
