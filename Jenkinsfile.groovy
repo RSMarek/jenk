@@ -1,7 +1,7 @@
 #!groovy
 import hudson.FilePath
 
-def libs
+
 
 pipeline {
     agent any
@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     def workspace = env.WORKSPACE
-                    libs = load "${workspace}/libs/lib.groovy"
+                    def libs = load "${workspace}/libs/lib.groovy"
                     echo "Building lib..."
                     libs.meth()
                 }
