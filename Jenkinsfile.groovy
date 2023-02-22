@@ -1,10 +1,7 @@
 #!groovy
-// def libs
-// def rootDir = pwd()
 import hudson.FilePath
-
 def workspace = env.WORKSPACE
-// def libs = load "${workspace}/libs/lib.groovy"
+def libs = load "${workspace}/libs/lib.groovy"
 
 pipeline {
     agent any
@@ -13,8 +10,6 @@ pipeline {
             steps {
                 script {
                     echo "Building lib..."
-                    // libs = load "libs/lib.groovy"
-                    // libs.meth()
                 }
             }
         }
