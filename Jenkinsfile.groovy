@@ -1,5 +1,5 @@
 #!groovy
-def kek
+def lib
 
 pipeline {
     agent any
@@ -7,7 +7,7 @@ pipeline {
         stage('load lib') {
             steps {
                 script {
-                    def lib = load "libs/lib.groovy"
+                    lib = load "libs/lib.groovy"
                     lib.sayHello('World')
                 }
             }
