@@ -3,8 +3,8 @@
 // def rootDir = pwd()
 import hudson.FilePath
 
-
-def libs = load "${WORKSPACE}/libs/lib.groovy"
+def workspace = env.WORKSPACE
+def libs = load "${workspace}/libs/lib.groovy"
 
 pipeline {
     agent any
