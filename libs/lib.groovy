@@ -1,5 +1,3 @@
-package libs;
-
-def meth(){
-    echo "SHIEET from lib"
+def sayHello(name) {
+    println "Hello, ${name}!"
 }

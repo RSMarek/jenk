@@ -15,7 +15,7 @@ pipeline {
                     def lib = load libPath
                     echo "Loaded lib: ${lib}"
                     echo "Calling meth() method from lib:"
-                    lib.meth()
+                    lib.sayHello('World')
                 }
             }
         }
