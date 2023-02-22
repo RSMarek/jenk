@@ -1,5 +1,5 @@
 package libs;
 
 def meth(){
-    println "SHIEET from lib"
+    echo "SHIEET from lib"
 }

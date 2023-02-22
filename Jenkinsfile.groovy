@@ -12,7 +12,7 @@ pipeline {
                     def workspace = env.WORKSPACE
                     def libs = load "${workspace}/libs/lib.groovy"
                     echo "Building lib..."
-                    // libs.meth()
+                    libs.meth()
                 }
             }
         }
