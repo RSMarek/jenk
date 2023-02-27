@@ -18,6 +18,7 @@ pipeline {
                     echo "Building release..."
                     validate()
                     lib.sayHello('Build')
+                    lib.validate2()
                 }
             }
         }
