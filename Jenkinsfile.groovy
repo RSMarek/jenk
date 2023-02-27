@@ -21,7 +21,18 @@ pipeline {
                 }
             }
         }
+        stage('sh test') {
+            steps {
+                script {
+                    validate2()
+                }
+            }
+        }
     }
+}
+
+def validate2(){
+    sh """ls -l"""
 }
 
 def validate(){
