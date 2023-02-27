@@ -26,6 +26,14 @@ pipeline {
             steps {
                 script {
                     validate2()
+                    setEnv()
+                }
+            }
+        }
+        stage('print env') {
+            steps {
+                script {
+                    echo "His name is: ${env.name}. And ha has ${env.age} years old"
                 }
             }
         }
@@ -34,6 +42,11 @@ pipeline {
 
 def validate2(){
     sh """ls -l"""
+}
+
+def setEnv(){
+    env.name = "Marek"
+    env.age = "22"
 }
 
 def validate(){
