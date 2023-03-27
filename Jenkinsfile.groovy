@@ -19,11 +19,11 @@ pipeline {
                     validate()
                     lib.sayHello('Build')
                     lib.validate2()
-                    if ($CHANGE_BRANCH ?: false) {
-                        println "THIS IS NOT NULL"
+                    if (env.CHANGE_BRANCH ?: false) {
+                        echo "THIS IS NOT NULL ${env.CHANGE_BRANCH}"
                     }
                     else{
-                        println "THIS IS NULL"
+                        echo "THIS IS NULL ${env.BRANCH_NAME}"
                     }
 
                 }
