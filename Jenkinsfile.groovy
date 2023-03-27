@@ -19,7 +19,7 @@ pipeline {
                     validate()
                     lib.sayHello('Build')
                     lib.validate2()
-                    echo "kkk $CHANGE_SOURCE"
+                    echo "kkk ${CHANGE_SOURCE}"
                 }
             }
         }
