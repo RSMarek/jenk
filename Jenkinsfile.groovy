@@ -19,7 +19,7 @@ pipeline {
                     validate()
                     lib.sayHello('Build')
                     lib.validate2()
-                    echo "kkk $BRANCH_NAME"
+                    println ""kkk $BRANCH_NAME""
                 }
             }
         }
